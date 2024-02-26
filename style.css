@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(248, 228, 171);
+
+  width: 80%;
+  margin: auto;
+}
+
+/*............... header styles ................. */
+header {
+  margin-bottom: 20px;
+}
+
+header img {
+  display: block;
+  width: 50%;
+  margin: 15px auto;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 70%;
+  height: 40px;
+  margin: auto;
+  background-color: black;
+  border-radius: 15px;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+ul li a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
+/* .................main styles .................. */
+
+main {
+  margin-bottom: 20px;
+
+  display: grid;
+  gap: 15px;
+  grid-template-areas:
+    "promotion promotion promotion"
+    "new_menu book hours";
+}
+
+.promotion {
+  grid-area: promotion;
+
+  padding: 15px;
+  max-height: 220px;
+
+  background-image: url(assets/promotion-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  height: 180px;
+
+  border-radius: 15px;
+}
+
+.new_menu {
+  grid-area: new_menu;
+}
+
+.book {
+  grid-area: book;
+}
+
+.hours {
+  grid-area: hours;
+}
+
+.promotion h1 {
+  color: rgb(255, 0, 0);
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.promotion p {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: rgb(255, 208, 0);
+  border-radius: 15px;
+}
+
+.container h2 {
+  margin: 10px 10px 0 10px;
+}
+
+.artical_img {
+  align-self: center;
+
+  margin: 10px 10px 0 10px;
+  max-width: 90%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.container p {
+  margin: 10px;
+}
+
+/* .................footer styles ................ */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+footer img {
+  max-width: 10%;
+  height: 100px;
+}
+
+footer {
+  font-size: 15px;
+  font-weight: 600;
+}
+footer p {
+  align-self: self-end;
+}
+p span {
+  font-size: 15px;
+}
+
+/* ............media query............ */
+
+@media (max-width: 650px) {
+  main {
+    grid-template-areas:
+      "promotion"
+      "new_menu"
+      "book"
+      "hours";
+  }
+
+  .container h2 {
+    align-self: center;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+  footer p {
+    margin-top: 20px;
+  }
+}
