@@ -6,7 +6,7 @@
 
 body {
   background-color: rgb(248, 228, 171);
-
+  font-family: "Libre Baskerville", serif;
   width: 80%;
   margin: auto;
 }
@@ -41,6 +41,7 @@ ul li {
 ul li a {
   text-decoration: none;
   color: white;
+  font-weight: 900;
 }
 
 ul li a:hover {
@@ -88,15 +89,26 @@ main {
   grid-area: hours;
 }
 
+@keyframes horizontal-shaking {
+ 0% { transform: translateX(0) }
+ 25% { transform: translateX(5px) }
+ 50% { transform: translateX(-5px) }
+ 75% { transform: translateX(5px) }
+ 100% { transform: translateX(0) }
+}
+
 .promotion h1 {
   color: rgb(255, 0, 0);
   font-size: 30px;
   font-weight: bolder;
+  animation: horizontal-shaking 1s infinite;
 }
 
 .promotion p {
-  color: rgb(255, 255, 255);
-  font-weight: bold;
+  color: rgb(195, 253, 147);
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 60px;
 }
 
 .container {
@@ -110,6 +122,7 @@ main {
 
 .container h2 {
   margin: 10px 10px 0 10px;
+  font-weight: 700;
 }
 
 .artical_img {
@@ -152,7 +165,7 @@ p span {
 
 /* ............media query............ */
 
-@media (max-width: 650px) {
+@media (max-width: 720px) {
   main {
     grid-template-areas:
       "promotion"
