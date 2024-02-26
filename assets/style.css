@@ -67,7 +67,7 @@ main {
   padding: 15px;
   max-height: 220px;
 
-  background-image: url(assets/promotion-img.jpg);
+  background-image: url(promotion-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
